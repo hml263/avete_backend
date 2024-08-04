@@ -32,9 +32,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=hml
-      - POSTGRES_PASSWORD=asd123!@#
-      - POSTGRES_DB=db-1
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgresavete
 
 volumes:
   postgres_data:
