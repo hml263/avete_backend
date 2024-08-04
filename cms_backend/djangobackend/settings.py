@@ -150,7 +150,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'cms_backend.wsgi.application'
+WSGI_APPLICATION = 'djangobackend.wsgi.application'
 ASGI_APPLICATION = 'cms_backend.asgi.application'
 
 

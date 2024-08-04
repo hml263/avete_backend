@@ -11,7 +11,7 @@ services:
       - media_volume:/usr/src/cms_backend/media
   web:
     build: ./cms_backend
-    command: gunicorn cms_backend.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn djangobackend.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - ./cms_backend/:/usr/src/cms_backend/
       - media_volume:/usr/src/cms_backend/media
