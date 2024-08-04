@@ -24,7 +24,7 @@ services:
       - daphne
   daphne:
     build: ./cms_backend
-    command: daphne --bind 0.0.0.0 -p 8002 cms_backend.asgi:application
+    command: daphne --bind 0.0.0.0 -p 8002 djangobackend.asgi:application
     ports:
       - 8002:8002
   db:
@@ -32,9 +32,9 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=postgresuser
-      - POSTGRES_PASSWORD=postgrespassword
-      - POSTGRES_DB=postgres
+      - POSTGRES_USER=hml
+      - POSTGRES_PASSWORD=asd123!@#
+      - POSTGRES_DB=postgresavete
 
 volumes:
   postgres_data:

@@ -151,7 +151,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'djangobackend.wsgi.application'
-ASGI_APPLICATION = 'cms_backend.asgi.application'
+ASGI_APPLICATION = 'djangobackend.asgi.application'
 
 
 # Database
