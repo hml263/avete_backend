@@ -16,9 +16,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get("DEBUG", default=0))
+DEBUG = True #bool(os.environ.get("DEBUG", default=0))
 
-ALLOWED_HOSTS = ['54.168.12.161'] #os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
+
+
+if DEBUG:
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1", "54.168.12.161"]
+else:
+    ALLOWED_HOSTS = ["54.168.12.161"]
 
 AUTH_USER_MODEL = 'useraccount.User'
 
@@ -28,6 +33,12 @@ if DEBUG:
     WEBSITE_URL = 'http://localhost:8000'
 else:
      WEBSITE_URL = 'http://54.168.12.161:1337'
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
+    }
+}
 
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
@@ -61,7 +72,7 @@ CORS_ALLOWED_ORIGINS = [
     'http://54.168.12.161:1337'
 ]
 
-CORS_TRUSTED_ORIGINS = [
+CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
     'http://54.168.12.161',
@@ -139,8 +150,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'djangobackend.wsgi.application'
-ASGI_APPLICATION = 'dhangobackend.asgi.application'
+WSGI_APPLICATION = 'cms_backend.wsgi.application'
+ASGI_APPLICATION = 'cms_backend.asgi.application'
 
 
 # Database
