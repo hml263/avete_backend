@@ -34,7 +34,7 @@ services:
     environment:
       - POSTGRES_USER=hml
       - POSTGRES_PASSWORD=asd123!@#
-      - POSTGRES_DB=postgresavete
+      - POSTGRES_DB=db-1
 
 volumes:
   postgres_data:
