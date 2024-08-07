@@ -23,7 +23,7 @@ DEBUG = True #bool(os.environ.get("DEBUG", default=0))
 if DEBUG:
     ALLOWED_HOSTS = ["localhost", "127.0.0.1", "54.168.12.161"]
 else:
-    ALLOWED_HOSTS = ["https://avete.dev/admin"]
+    ALLOWED_HOSTS = ["54.168.12.161"]
 
 AUTH_USER_MODEL = 'useraccount.User'
 
@@ -32,7 +32,7 @@ SITE_ID = 1
 if DEBUG:
     WEBSITE_URL = 'http://localhost:8000'
 else:
-     WEBSITE_URL = 'https://avete.dev/admin'
+     WEBSITE_URL = 'http://54.168.12.161:1337'
 
 CHANNEL_LAYERS = {
     'default': {

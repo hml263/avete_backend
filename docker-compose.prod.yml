@@ -1,15 +1,14 @@
-version: '4'
+version: '3.8'
 
 services:
   nginx:
-    image: nginx:latest
+    build: ./nginx
     ports:
       - 1337:80
     depends_on:
       - web
     volumes:
       - media_volume:/usr/src/cms_backend/media
-      - /etc/nginx/sites-available/avete
   web:
     build: ./cms_backend
     command: gunicorn djangobackend.wsgi:application --bind 0.0.0.0:8000
