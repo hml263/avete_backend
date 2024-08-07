@@ -21,7 +21,7 @@ DEBUG = True #bool(os.environ.get("DEBUG", default=0))
 
 
 if DEBUG:
-    ALLOWED_HOSTS = ["localhost", "127.0.0.1", "https://avete.dev/admin"]
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1", "54.168.12.161"]
 else:
     ALLOWED_HOSTS = ["https://avete.dev/admin"]
 
