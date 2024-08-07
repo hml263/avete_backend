@@ -21,9 +21,9 @@ DEBUG = True #bool(os.environ.get("DEBUG", default=0))
 
 
 if DEBUG:
-    ALLOWED_HOSTS = ["localhost", "127.0.0.1", "54.168.12.161"]
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1", "https://avete.dev/admin"]
 else:
-    ALLOWED_HOSTS = ["54.168.12.161"]
+    ALLOWED_HOSTS = ["https://avete.dev/admin"]
 
 AUTH_USER_MODEL = 'useraccount.User'
 
@@ -32,7 +32,7 @@ SITE_ID = 1
 if DEBUG:
     WEBSITE_URL = 'http://localhost:8000'
 else:
-     WEBSITE_URL = 'http://54.168.12.161:1337'
+     WEBSITE_URL = 'https://avete.dev/admin'
 
 CHANNEL_LAYERS = {
     'default': {
@@ -68,22 +68,22 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
-    'http://54.168.12.161',
-    'http://54.168.12.161:1337'
+    'https://avete.dev',
+    'https://avete.dev/admin'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
-    'http://54.168.12.161',
-    'http://54.168.12.161:1337'
+    'https://avete.dev',
+    'https://avete.dev/admin'
 ]
 
 CORS_ORIGINS_WHITELIST = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
-    'http://54.168.12.161',
-    'http://54.168.12.161:1337'
+    'https://avete.dev',
+    'https://avete.dev/admin'
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True 
