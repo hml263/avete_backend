@@ -68,22 +68,22 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
-    'https://avete.dev',
-    'https://avete.dev/admin'
+    'http://54.168.12.161',
+    'http://54.168.12.161:1337'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
-    'https://avete.dev',
-    'https://avete.dev/admin'
+    'http://54.168.12.161',
+    'http://54.168.12.161:1337'
 ]
 
 CORS_ORIGINS_WHITELIST = [
     'http://127.0.0.1:8000',
     'http://127.0.0.1:3000',
-    'https://avete.dev',
-    'https://avete.dev/admin'
+    'http://54.168.12.161',
+    'http://54.168.12.161:1337'
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True 
