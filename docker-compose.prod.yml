@@ -1,24 +1,15 @@
-version: '3.8'
+version: '4'
 
 services:
-
-  backend:
-    build:
-      context: ./cms_backend
-    volumes:
-      - media_volume:/usr/src/cms_backend/media
-    networks:
-      - webnet
-
   nginx:
-    build: ./nginx
+    image: nginx:latest
     ports:
-      - 1337:80
+      - 80:80
     depends_on:
       - web
     volumes:
-      - /etc/nginx/sites-available:/etc/nginx/sites-available:ro
-      - /etc/nginx/sites-enabled:/etc/nginx/sites-enabled:ro
+      - media_volume:/usr/src/cms_backend/media
+      - /etc/nginx/sites-available/avete:/etc/nginx/conf.d/default.conf:ro
   web:
     build: ./cms_backend
     command: gunicorn djangobackend.wsgi:application --bind 0.0.0.0:8000
