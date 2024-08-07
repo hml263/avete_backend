@@ -1,14 +1,7 @@
 version: '3.8'
 
 services:
-  nginx:
-    build: ./nginx
-    ports:
-      - 1337:80
-    depends_on:
-      - web
-    volumes:
-      - media_volume:/usr/src/cms_backend/media
+ 
   web:
     build: ./cms_backend
     command: gunicorn djangobackend.wsgi:application --bind 0.0.0.0:8000
