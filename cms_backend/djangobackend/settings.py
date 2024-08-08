@@ -29,7 +29,7 @@ AUTH_USER_MODEL = 'useraccount.User'
 
 SITE_ID = 1
 
-WEBSITE_URL = 'http://54.168.12.161:133'
+WEBSITE_URL = 'http://54.168.12.161:1337'
 
 
 CHANNEL_LAYERS = {
