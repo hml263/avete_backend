@@ -12,7 +12,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     category = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='uploads/properties')
+    image = models.ImageField(upload_to='uploads/blogs')
     created_at = models.DateTimeField(auto_now_add=True)
 
     def image_url(self):
